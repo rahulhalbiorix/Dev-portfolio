@@ -19,7 +19,11 @@
           <div
             class="flex h-52 items-center justify-center bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-6xl"
           >
-            🚀
+            <img
+              :src="defaultProjectImage"
+              :alt="project.title"
+              class="h-full w-full object-cover"
+            />
           </div>
 
           <!-- CONTENT -->
@@ -65,6 +69,8 @@
 </template>
 
 <script setup lang="ts">
+import defaultProjectImage from '@/assets/project-img/05b05941-3d8e-40f0-a4e7-9bf77bde4bdd.png'
+
 const projects = [
   {
     title: 'Developer Portfolio',
