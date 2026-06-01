@@ -3,7 +3,11 @@
     <HeroSection />
     <TechStack />
     <FeaturedProjects />
-    <ContactCTA />
+    <AppCTA
+      :titles="['Let’s Work Together', 'Build Modern Applications', 'Need A Frontend Developer?']"
+      description="I'm always interested in new opportunities, freelance projects and collaborations."
+      buttonText="Get In Touch"
+    />
   </div>
 </template>
 
@@ -11,5 +15,5 @@
 import HeroSection from '@/components/home/HeroSection.vue'
 import TechStack from '@/components/home/TechStack.vue'
 import FeaturedProjects from '@/components/home/FeaturedProjects.vue'
-import ContactCTA from '@/components/home/ContactCTA.vue'
+import AppCTA from '@/components/common/AppCTA.vue'
 </script>
