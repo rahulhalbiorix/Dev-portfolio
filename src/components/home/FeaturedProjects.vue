@@ -1,38 +1,49 @@
 <template>
-  <section class="px-6 py-20">
+  <section class="px-5 py-16 sm:px-6 lg:px-12 lg:py-24">
     <div class="mx-auto max-w-7xl">
       <!-- TITLE -->
-      <div class="mb-14 text-center">
-        <h2 class="text-4xl font-bold text-white">Featured Projects</h2>
+      <div class="mb-14 text-center lg:mb-16">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[4px] text-cyan-400 sm:text-sm">
+          Portfolio
+        </p>
 
-        <p class="mt-4 text-slate-400">Some of my recent work</p>
+        <h2 class="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Featured Projects</h2>
+
+        <p class="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base lg:text-lg">
+          Some of my recent frontend projects built with modern technologies and scalable
+          architecture.
+        </p>
       </div>
 
       <!-- PROJECT GRID -->
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         <div
           v-for="project in projects"
           :key="project.title"
-          class="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-lg transition duration-300 hover:-translate-y-2 hover:border-cyan-400/30"
+          class="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/30 hover:bg-white/[0.05] hover:shadow-[0_0_40px_rgba(34,211,238,0.12)] sm:rounded-3xl"
         >
           <!-- IMAGE -->
-          <div
-            class="flex h-52 items-center justify-center bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-6xl"
-          >
+          <div class="relative overflow-hidden">
+            <div
+              class="absolute inset-0 z-10 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60"
+            ></div>
+
             <img
               :src="defaultProjectImage"
               :alt="project.title"
-              class="h-full w-full object-cover"
+              class="h-52 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-60"
             />
           </div>
 
           <!-- CONTENT -->
-          <div class="p-6">
-            <h3 class="mb-3 text-2xl font-semibold text-white">
+          <div class="p-5 sm:p-6">
+            <!-- TITLE -->
+            <h3 class="mb-3 text-xl font-bold text-white sm:text-2xl">
               {{ project.title }}
             </h3>
 
-            <p class="mb-5 leading-7 text-slate-400">
+            <!-- DESCRIPTION -->
+            <p class="mb-5 text-sm leading-7 text-slate-400 sm:text-base">
               {{ project.description }}
             </p>
 
@@ -41,23 +52,27 @@
               <span
                 v-for="tech in project.tech"
                 :key="tech"
-                class="rounded-full bg-cyan-500/10 px-3 py-1 text-sm text-cyan-300"
+                class="rounded-full border border-cyan-400/10 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-300 sm:text-sm"
               >
                 {{ tech }}
               </span>
             </div>
 
             <!-- BUTTONS -->
-            <div class="flex gap-4">
+            <div class="flex flex-col gap-3 sm:flex-row">
               <button
-                class="rounded-lg bg-cyan-500 px-4 py-2 text-sm text-white transition hover:bg-cyan-600"
+                class="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-4 py-3 text-sm font-medium text-white transition duration-300 hover:bg-cyan-600"
               >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                 Live Demo
               </button>
 
               <button
-                class="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:bg-white/10"
+                class="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition duration-300 hover:bg-white/10"
               >
+                <i class="fa-brands fa-github"></i>
+
                 GitHub
               </button>
             </div>
