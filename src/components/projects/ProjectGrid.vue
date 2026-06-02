@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+  <div class="grid gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-8">
     <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
   </div>
 </template>

@@ -1,10 +1,26 @@
 <template>
-  <div class="rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur-lg">
-    <h2 class="mb-8 text-3xl font-bold text-white">Send Message</h2>
+  <div
+    class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-lg sm:rounded-[32px] sm:p-6 lg:p-8"
+  >
+    <!-- HEADER -->
+    <div class="mb-8">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[4px] text-cyan-400 sm:text-sm">
+        Contact Form
+      </p>
 
-    <form class="space-y-6" @submit.prevent="submitForm">
+      <h2 class="text-3xl font-bold text-white sm:text-4xl">Send Message</h2>
+
+      <p class="mt-4 text-sm leading-7 text-slate-400 sm:text-base">
+        Feel free to send me a message regarding projects, collaboration or freelance opportunities.
+      </p>
+    </div>
+
+    <!-- FORM -->
+    <form class="space-y-5 sm:space-y-6" @submit.prevent="submitForm">
+      <!-- NAME -->
       <ContactInput v-model="form.name" label="Full Name" placeholder="Enter your name" />
 
+      <!-- EMAIL -->
       <ContactInput
         v-model="form.email"
         type="email"
@@ -12,14 +28,19 @@
         placeholder="Enter your email"
       />
 
+      <!-- SUBJECT -->
       <ContactInput v-model="form.subject" label="Subject" placeholder="Enter subject" />
 
+      <!-- MESSAGE -->
       <ContactTextarea v-model="form.message" label="Message" placeholder="Write your message..." />
 
+      <!-- BUTTON -->
       <button
         type="submit"
-        class="w-full rounded-2xl bg-cyan-500 px-6 py-4 font-medium text-white transition hover:bg-cyan-600"
+        class="flex w-full items-center justify-center gap-3 rounded-2xl bg-cyan-500 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-cyan-600 sm:py-4 sm:text-base"
       >
+        <i class="fa-solid fa-paper-plane"></i>
+
         Send Message
       </button>
     </form>
