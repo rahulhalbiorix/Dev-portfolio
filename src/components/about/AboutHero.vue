@@ -3,9 +3,9 @@
     <!-- IMAGE -->
     <div class="flex justify-center">
       <div
-        class="flex h-[380px] w-[380px] items-center justify-center rounded-[32px] border border-cyan-400/20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-8xl font-bold text-white shadow-2xl shadow-cyan-500/20"
+        class="h-[380px] w-[380px] overflow-hidden rounded-[32px] border border-cyan-400/20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 shadow-2xl shadow-cyan-500/20"
       >
-        R
+        <img :src="ProfileImage" alt="Rahul Profile" class="h-full w-full object-cover" />
       </div>
     </div>
 
@@ -35,3 +35,6 @@
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import ProfileImage from '@/assets/profile-img/IMG_20240908_204013282.jpg'
+</script>

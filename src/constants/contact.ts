@@ -2,18 +2,31 @@ export const contactInfo = [
   {
     title: 'Location',
     value: 'Ahmedabad, India',
-    icon: '📍',
+    icon: 'fa-solid fa-location-dot',
   },
   {
     title: 'Email',
     value: 'rahul@example.com',
-    icon: '📧',
+    icon: 'fa-solid fa-envelope',
   },
   {
     title: 'Phone',
     value: '+91 98765 43210',
-    icon: '📞',
+    icon: 'fa-solid fa-phone',
   },
 ]
 
-export const socialLinks = ['GitHub', 'LinkedIn', 'Twitter']
+export const socialLinks = [
+  {
+    name: 'GitHub',
+    icon: 'fa-brands fa-github',
+  },
+  {
+    name: 'LinkedIn',
+    icon: 'fa-brands fa-linkedin-in',
+  },
+  {
+    name: 'Twitter',
+    icon: 'fa-brands fa-x-twitter',
+  },
+]

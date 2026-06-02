@@ -4,11 +4,9 @@
   >
     <!-- IMAGE -->
     <div
-      class="relative flex h-60 items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-500/20 to-blue-500/20"
+      class="flex h-52 items-center justify-center bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-6xl"
     >
-      <div class="absolute inset-0 bg-black/20"></div>
-
-      <span class="relative z-10 text-7xl transition duration-300 group-hover:scale-110"> 🚀 </span>
+      <img :src="defaultProjectImage" :alt="project.title" class="h-full w-full object-cover" />
     </div>
 
     <!-- CONTENT -->
@@ -59,6 +57,8 @@
 </template>
 
 <script setup lang="ts">
+import defaultProjectImage from '@/assets/project-img/05b05941-3d8e-40f0-a4e7-9bf77bde4bdd.png'
+
 defineProps<{
   project: {
     title: string
