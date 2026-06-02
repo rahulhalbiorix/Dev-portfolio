@@ -45,5 +45,5 @@
 </template>
 
 <script setup lang="ts">
-import ProfileImage from '@/assets/profile-img/IMG_20240908_204013282.jpg'
+import ProfileImage from '@/assets/profile-img/profileImage.webp'
 </script>
