@@ -104,7 +104,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import profileImage from '@/assets/profile-img/IMG_20240908_204013282.webp'
+import profileImage from '@/assets/profile-img/profileImage.webp'
 import vueIcon from '@/assets/Tech-Icon/Vue.js.png'
 import NodeIcon from '@/assets/Tech-Icon/Node.js.png'
 import tailwindIcon from '@/assets/Tech-Icon/Tailwind CSS.png'
