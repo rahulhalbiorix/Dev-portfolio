@@ -11,7 +11,7 @@
           Hi, I'm
 
           <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Rahul
+            Rahul Hadiyal
           </span>
         </h1>
 
